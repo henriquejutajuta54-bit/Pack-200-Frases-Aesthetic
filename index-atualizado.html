@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pack 200 Frases Aesthetic — Compre Agora</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #05080e;
+    --surface: #0b1120;
+    --card: #0f1a2a;
+    --border: #1a2c42;
+    --teal: #00d4b8;
+    --teal-dim: rgba(0,212,184,0.1);
+    --teal-glow: rgba(0,212,184,0.25);
+    --gold: #f5c842;
+    --gold-dim: rgba(245,200,66,0.1);
+    --red: #ff4444;
+    --white: #e8f2ff;
+    --muted: #3d5570;
+    --muted2: #6a85a0;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE ── */
+  body::after {
+    content:'';
+    position:fixed; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events:none; z-index:9999; opacity:.6;
+  }
+
+  /* ── GLOWS ── */
+  .glow { position:fixed; border-radius:50%; filter:blur(100px); pointer-events:none; z-index:0; }
+  .g1 { width:700px; height:700px; background:rgba(0,212,184,0.07); top:-300px; left:-200px; }
+  .g2 { width:500px; height:500px; background:rgba(245,200,66,0.04); bottom:-100px; right:-100px; }
+  .g3 { width:400px; height:400px; background:rgba(0,212,184,0.05); top:50%; left:50%; transform:translate(-50%,-50%); }
+
+  /* ── URGENCY BAR ── */
+  .urgency-bar {
+    position: sticky; top:0; z-index:100;
+    background: linear-gradient(90deg, #c9000c, #ff2d2d, #c9000c);
+    background-size: 200% 100%;
+    animation: barSlide 3s linear infinite;
+    text-align:center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+  @keyframes barSlide { 0%{background-position:0%} 100%{background-position:200%} }
+
+  .urgency-bar span { opacity:.8; margin: 0 8px; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 80px 24px 60px;
+  }
+
+  .pre-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal-dim);
+    border: 1px solid rgba(0,212,184,0.25);
+    color: var(--teal);
+    font-size: 11px; font-weight:600; letter-spacing:3px; text-transform:uppercase;
+    padding: 7px 18px; border-radius:100px; margin-bottom:28px;
+  }
+
+  .pre-tag::before { content:'✦'; font-size:9px; }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 13vw, 120px);
+    line-height: .9;
+    letter-spacing: 4px;
+    text-shadow: 0 0 80px rgba(0,212,184,0.3);
+  }
+
+  h1 em {
+    font-style:normal;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--teal);
+  }
+
+  .hero-sub {
+    font-family: 'Caveat', cursive;
+    font-size: clamp(22px,4vw,32px);
+    color: var(--muted2);
+    margin-top: 16px;
+    letter-spacing:.5px;
+  }
+
+  /* PREVIEW CARDS STRIP */
+  .strip-wrap {
+    overflow: hidden;
+    position: relative; z-index:1;
+    padding: 10px 0 30px;
+    mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
+  }
+
+  .strip {
+    display: flex; gap:14px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+  }
+
+  .strip:hover { animation-play-state: paused; }
+
+  @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  .strip-card {
+    flex-shrink:0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 22px;
+    max-width: 220px;
+    font-family:'Caveat',cursive;
+    font-size: 16px;
+    font-weight:600;
+    line-height:1.35;
+    color: var(--white);
+    cursor: default;
+  }
+
+  .strip-card .cat-dot {
+    width:6px; height:6px; border-radius:50%;
+    background: var(--teal); display:inline-block; margin-bottom:10px;
+  }
+
+  /* ── WHAT YOU GET ── */
+  .section { position:relative; z-index:1; max-width:960px; margin:0 auto; padding:60px 24px; }
+
+  .section-label {
+    text-align:center; color:var(--teal);
+    font-size:11px; letter-spacing:4px; text-transform:uppercase; font-weight:600;
+    margin-bottom:16px;
+  }
+
+  .section-title {
+    font-family:'Bebas Neue',sans-serif;
+    font-size: clamp(36px,7vw,64px);
+    text-align:center; line-height:1;
+    margin-bottom: 48px;
+    letter-spacing:3px;
+  }
+
+  .features-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;
+  }
+
+  .feat-card {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px 24px;
+    transition: border-color .2s, transform .2s;
+  }
+
+  .feat-card:hover {
+    border-color: rgba(0,212,184,.3);
+    transform: translateY(-4px);
+  }
+
+  .feat-icon { font-size:28px; margin-bottom:14px; }
+  .feat-title { font-weight:600; font-size:16px; margin-bottom:8px; }
+  .feat-desc { color:var(--muted2); font-size:14px; line-height:1.6; }
+
+  /* CATEGORIES */
+  .cats-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;
+    margin-top:0;
+  }
+
+  .cat-item {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:16px 20px;
+    display:flex; align-items:center; gap:12px;
+  }
+
+  .cat-emoji { font-size:20px; }
+  .cat-name { font-weight:500; font-size:14px; }
+  .cat-count { margin-left:auto; color:var(--teal); font-family:'Bebas Neue',sans-serif; font-size:18px; }
+
+  /* ── PREVIEW ── */
+  .preview-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;
+  }
+
+  .prev-card {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px 18px;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .prev-card::before {
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg,transparent,var(--teal),transparent);
+  }
+
+  .prev-num { font-family:'Bebas Neue',sans-serif; font-size:10px; letter-spacing:2px; color:var(--muted); margin-bottom:10px; }
+  .prev-text { font-family:'Caveat',cursive; font-size:18px; font-weight:600; line-height:1.35; }
+  .prev-blur { filter:blur(5px); opacity:.4; }
+
+  .preview-lock {
+    text-align:center; padding:32px;
+    background:linear-gradient(180deg, transparent, var(--bg) 60%);
+    margin-top:-80px; position:relative; z-index:2;
+  }
+
+  .lock-icon { font-size:36px; margin-bottom:10px; }
+  .lock-text { color:var(--muted2); font-size:14px; margin-bottom:20px; }
+
+  /* ── PRICING ── */
+  .price-box {
+    max-width:480px; margin:0 auto;
+    background: var(--card);
+    border: 1px solid rgba(0,212,184,.3);
+    border-radius: 24px;
+    padding: 40px 36px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    box-shadow: 0 0 60px rgba(0,212,184,.08), 0 0 120px rgba(0,212,184,.04);
+  }
+
+  .price-box::before {
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg, transparent, var(--teal), var(--gold), var(--teal), transparent);
+  }
+
+  .price-badge {
+    display:inline-block;
+    background:var(--gold-dim);
+    border:1px solid rgba(245,200,66,.3);
+    color:var(--gold);
+    font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+    padding:5px 14px; border-radius:100px; margin-bottom:20px;
+  }
+
+  .price-name {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:28px; letter-spacing:3px; margin-bottom:6px;
+  }
+
+  .price-old {
+    color:var(--muted); font-size:14px;
+    text-decoration:line-through; margin-bottom:4px;
+  }
+
+  .price-main {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:72px; line-height:1;
+    color:var(--teal);
+    text-shadow:0 0 40px rgba(0,212,184,.4);
+    margin-bottom:6px;
+  }
+
+  .price-main sup { font-size:28px; vertical-align:top; margin-top:14px; display:inline-block; }
+  .price-main sub { font-size:20px; color:var(--muted2); }
+
+  .price-note { color:var(--muted2); font-size:13px; margin-bottom:28px; }
+
+  .price-list {
+    list-style:none;
+    text-align:left; margin-bottom:32px;
+    display:flex; flex-direction:column; gap:10px;
+  }
+
+  .price-list li {
+    display:flex; align-items:flex-start; gap:10px;
+    font-size:14px; color:var(--muted2);
+  }
+
+  .price-list li::before { content:'✓'; color:var(--teal); font-weight:700; flex-shrink:0; margin-top:1px; }
+
+  /* ── BUY BUTTON ── */
+  .btn-buy {
+    display:block; width:100%;
+    background: linear-gradient(135deg, var(--teal), #00b89c);
+    color: #000;
+    font-family:'DM Sans',sans-serif;
+    font-size:17px; font-weight:700;
+    letter-spacing:.5px;
+    padding: 18px 32px;
+    border-radius:14px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    text-align:center;
+    transition: transform .15s, box-shadow .15s, filter .15s;
+    box-shadow: 0 8px 32px rgba(0,212,184,.3);
+    position:relative; overflow:hidden;
+    margin-bottom:16px;
+  }
+
+  .btn-buy::before {
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);
+    pointer-events:none;
+  }
+
+  .btn-buy:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 14px 44px rgba(0,212,184,.45);
+    filter:brightness(1.05);
+  }
+
+  .btn-buy:active { transform:scale(.98); }
+
+  .btn-pulse {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,100%{box-shadow:0 8px 32px rgba(0,212,184,.3)}
+    50%{box-shadow:0 8px 48px rgba(0,212,184,.6)}
+  }
+
+  .btn-arrow { margin-left:8px; }
+
+  .guarantee {
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    color:var(--muted2); font-size:12px; margin-top:4px;
+  }
+
+  /* PAYMENT ICONS */
+  .payment-icons {
+    display:flex; justify-content:center; align-items:center; gap:10px;
+    margin-top:20px; flex-wrap:wrap;
+  }
+
+  .pay-icon {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:5px 12px;
+    font-size:12px; font-weight:600;
+    color:var(--muted2);
+    letter-spacing:.5px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .test-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;
+  }
+
+  .test-card {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+  }
+
+  .test-stars { color:var(--gold); font-size:14px; margin-bottom:12px; letter-spacing:2px; }
+  .test-text { font-size:14px; color:var(--muted2); line-height:1.7; margin-bottom:16px; font-style:italic; }
+  .test-author { display:flex; align-items:center; gap:10px; }
+
+  .test-avatar {
+    width:36px; height:36px; border-radius:50%;
+    background:linear-gradient(135deg, var(--teal-dim), var(--border));
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px;
+  }
+
+  .test-name { font-size:13px; font-weight:600; }
+  .test-handle { font-size:11px; color:var(--muted); }
+
+  /* FAQ */
+  .faq-list { display:flex; flex-direction:column; gap:12px; max-width:640px; margin:0 auto; }
+
+  .faq-item {
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+  }
+
+  .faq-q {
+    width:100%; text-align:left;
+    background:none; border:none; color:var(--white);
+    font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500;
+    padding:20px 24px;
+    cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+  }
+
+  .faq-q .arrow { color:var(--teal); font-size:18px; transition:transform .3s; flex-shrink:0; }
+  .faq-item.open .faq-q .arrow { transform:rotate(45deg); }
+
+  .faq-a {
+    max-height:0; overflow:hidden;
+    transition:max-height .3s ease, padding .3s;
+    color:var(--muted2); font-size:14px; line-height:1.7;
+    padding: 0 24px;
+  }
+
+  .faq-item.open .faq-a { max-height:200px; padding: 0 24px 20px; }
+
+  /* CTA BOTTOM */
+  .cta-bottom {
+    position:relative; z-index:1;
+    text-align:center;
+    padding: 80px 24px;
+    background: radial-gradient(ellipse at center, rgba(0,212,184,.06) 0%, transparent 70%);
+    border-top:1px solid var(--border);
+  }
+
+  .cta-bottom h2 {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(36px,8vw,72px);
+    letter-spacing:3px; line-height:1;
+    margin-bottom:16px;
+  }
+
+  .cta-bottom p { color:var(--muted2); font-size:15px; margin-bottom:36px; max-width:480px; margin-left:auto; margin-right:auto; }
+
+  .btn-buy-lg {
+    display:inline-block;
+    background: linear-gradient(135deg, var(--teal), #00b89c);
+    color: #000;
+    font-family:'DM Sans',sans-serif;
+    font-size:18px; font-weight:700;
+    letter-spacing:.5px;
+    padding: 20px 48px;
+    border-radius:14px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 8px 40px rgba(0,212,184,.35);
+    animation:pulse 2s ease-in-out infinite;
+  }
+
+  .btn-buy-lg:hover { transform:translateY(-3px) scale(1.02); }
+
+  /* FOOTER */
+  footer {
+    position:relative; z-index:1;
+    text-align:center; padding:30px 24px;
+    border-top:1px solid var(--border);
+    color:var(--muted); font-size:12px;
+    letter-spacing:.5px;
+  }
+
+  footer a { color:var(--muted); text-decoration:underline; }
+
+  /* DIVIDER */
+  .divider {
+    width:60px; height:2px;
+    background:linear-gradient(90deg,transparent,var(--teal),transparent);
+    margin:0 auto 48px;
+  }
+
+  /* RESPONSIVE */
+  @media(max-width:600px) {
+    .price-box { padding:28px 20px; }
+    .price-main { font-size:56px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+<div class="glow g3"></div>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  🔥 OFERTA POR TEMPO LIMITADO <span>•</span> Preço sobe em breve <span>•</span> 🔥
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="pre-tag">Produto Digital • Entrega Imediata</div>
+  <h1>PACK<br><em>200</em><br>FRASES</h1>
+  <p class="hero-sub">Aesthetic Noturno • Anime • Madrugada</p>
+</section>
+
+<!-- PREVIEW STRIP (animado) -->
+<div class="strip-wrap">
+  <div class="strip" id="strip"></div>
+</div>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="section">
+  <p class="section-label">O que está incluso</p>
+  <h2 class="section-title">TUDO QUE<br>VOCÊ RECEBE</h2>
+  <div class="divider"></div>
+
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">📦</div>
+      <div class="feat-title">200 Frases Exclusivas</div>
+      <div class="feat-desc">Frases únicas criadas no estilo aesthetic noturno, prontas para usar em qualquer post, story ou wallpaper.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🗂️</div>
+      <div class="feat-title">8 Categorias Organizadas</div>
+      <div class="feat-desc">Madrugada, Solidão, Amor & Dor, Existencial, Rua & Vida, Mente, Tempo e Força — tudo separado e fácil de usar.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">⚡</div>
+      <div class="feat-title">Acesso Imediato</div>
+      <div class="feat-desc">Após a compra você recebe o arquivo na hora. Sem espera. Sem filas.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">♾️</div>
+      <div class="feat-title">Uso Ilimitado</div>
+      <div class="feat-desc">Use em contas pessoais, perfis criativos, grupos, canais. Sem restrição de uso.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">📱</div>
+      <div class="feat-title">Formato Universal</div>
+      <div class="feat-desc">Arquivo compatível com celular e computador. Abra em qualquer lugar, a qualquer hora.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🔄</div>
+      <div class="feat-title">Atualizações Grátis</div>
+      <div class="feat-desc">Comprou uma vez, tem acesso a todas as atualizações futuras sem pagar nada a mais.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="section" style="padding-top:0">
+  <p class="section-label">Distribuição do pack</p>
+  <h2 class="section-title">8 CATEGORIAS<br>25 FRASES CADA</h2>
+  <div class="divider"></div>
+
+  <div class="cats-grid">
+    <div class="cat-item"><span class="cat-emoji">🌙</span><span class="cat-name">Madrugada</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">🖤</span><span class="cat-name">Solidão</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">💔</span><span class="cat-name">Amor & Dor</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">🌀</span><span class="cat-name">Existencial</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">🏙️</span><span class="cat-name">Rua & Vida</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">🧠</span><span class="cat-name">Mente</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">⏳</span><span class="cat-name">Tempo</span><span class="cat-count">25</span></div>
+    <div class="cat-item"><span class="cat-emoji">💪</span><span class="cat-name">Força</span><span class="cat-count">25</span></div>
+  </div>
+</section>
+
+<!-- PREVIEW DESFOCADO -->
+<section class="section" style="padding-top:0">
+  <p class="section-label">Amostra do pack</p>
+  <h2 class="section-title">VEJA ALGUMAS<br>FRASES</h2>
+  <div class="divider"></div>
+
+  <div class="preview-grid">
+    <div class="prev-card">
+      <div class="prev-num">#001</div>
+      <div class="prev-text">A madrugada entende coisas que ninguém entende.</div>
+    </div>
+    <div class="prev-card">
+      <div class="prev-num">#026</div>
+      <div class="prev-text">Solidão não é não ter ninguém — é não ser entendido por ninguém.</div>
+    </div>
+    <div class="prev-card">
+      <div class="prev-num">#051</div>
+      <div class="prev-text">Não dói perder — dói descobrir que nunca teve o que pensou que tinha.</div>
+    </div>
+    <div class="prev-card">
+      <div class="prev-num">#076</div>
+      <div class="prev-text">Quem sou eu quando ninguém tá olhando?</div>
+    </div>
+    <div class="prev-card" style="position:relative">
+      <div class="prev-num">#150</div>
+      <div class="prev-text prev-blur">Fui feito de tudo que tentou me quebrar e isso me tornou indestrutível.</div>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;">🔒</div>
+    </div>
+    <div class="prev-card" style="position:relative">
+      <div class="prev-num">#200</div>
+      <div class="prev-text prev-blur">E no fim o silêncio foi a resposta mais honesta que já recebi de alguém.</div>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;">🔒</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:20px;color:var(--muted2);font-size:13px;">
+    🔒 196 frases desbloqueadas após a compra
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="comprar">
+  <p class="section-label">Oferta especial</p>
+  <h2 class="section-title">GARANTA O<br>SEU PACK</h2>
+  <div class="divider"></div>
+
+  <div class="price-box">
+    <div class="price-badge">🏷️ Melhor Oferta</div>
+    <div class="price-name">Pack Completo</div>
+    <div class="price-old">De R$ 29,90</div>
+    <div class="price-main"><sup>R$</sup>9<sub>,90</sub></div>
+    <div class="price-note">Pagamento único • Acesso vitalício</div>
+
+    <ul class="price-list">
+      <li>200 frases aesthetic exclusivas</li>
+      <li>8 categorias organizadas e prontas para usar</li>
+      <li>Acesso imediato após o pagamento</li>
+      <li>Funciona em celular e computador</li>
+      <li>Uso ilimitado — pessoal ou criativo</li>
+      <li>Atualizações futuras grátis</li>
+      <li>Garantia de 7 dias ou seu dinheiro de volta</li>
+    </ul>
+
+    <!-- 
+    ╔══════════════════════════════════════════════════════╗
+    ║  INSTRUÇÕES PARA ATIVAR O BOTÃO DE COMPRA           ║
+    ║                                                      ║
+    ║  OPÇÃO 1 — HOTMART:                                  ║
+    ║  1. Acesse hotmart.com e crie sua conta              ║
+    ║  2. Cadastre seu produto digital                     ║
+    ║  3. Copie o link de checkout                         ║
+    ║  4. Cole no href do botão abaixo                     ║
+    ║                                                      ║
+    ║  OPÇÃO 2 — KIWIFY:                                   ║
+    ║  1. Acesse kiwify.com.br e crie conta                ║
+    ║  2. Cadastre o produto e defina o preço              ║
+    ║  3. Copie o link de checkout                         ║
+    ║  4. Cole no href do botão abaixo                     ║
+    ║                                                      ║
+    ║  OPÇÃO 3 — DOPPUS / MONETIZZE:                       ║
+    ║  Mesmo processo — copie e cole o link no href        ║
+    ╚══════════════════════════════════════════════════════╝
+    -->
+
+    <a href="https://pay.kiwify.com.br/2EhyEUl" class="btn-buy btn-pulse" target="_blank" rel="noopener">
+      COMPRAR AGORA — R$ 9,90 <span class="btn-arrow">→</span>
+    </a>
+
+    <div class="guarantee">🛡️ Garantia de 7 dias • 100% seguro</div>
+
+    <div class="payment-icons">
+      <span class="pay-icon">PIX</span>
+      <span class="pay-icon">CARTÃO</span>
+      <span class="pay-icon">BOLETO</span>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section" style="padding-top:0">
+  <p class="section-label">Quem já comprou</p>
+  <h2 class="section-title">O QUE ESTÃO<br>FALANDO</h2>
+  <div class="divider"></div>
+
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <div class="test-text">"Comprei pra usar no meu perfil e toda semana uso uma frase diferente. Meu engajamento subiu muito. Vale demais!"</div>
+      <div class="test-author">
+        <div class="test-avatar">🌙</div>
+        <div><div class="test-name">Ana Clara</div><div class="test-handle">@anaclaraaa</div></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <div class="test-text">"As frases são pesadas de um jeito bom sabe? Parecem tiradas da cabeça da gente. Me identifiquei com quase todas."</div>
+      <div class="test-author">
+        <div class="test-avatar">🖤</div>
+        <div><div class="test-name">Lucas M.</div><div class="test-handle">@lucasm.nh</div></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <div class="test-text">"Uso pra montar wallpaper e story. Ficou exatamente o estilo que eu queria. Comprei mais dois packs diferentes."</div>
+      <div class="test-author">
+        <div class="test-avatar">✨</div>
+        <div><div class="test-name">Brenda K.</div><div class="test-handle">@brendakart</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <p class="section-label">Dúvidas</p>
+  <h2 class="section-title">PERGUNTAS<br>FREQUENTES</h2>
+  <div class="divider"></div>
+
+  <div class="faq-list" id="faq">
+    <div class="faq-item">
+      <button class="faq-q">Como recebo após a compra? <span class="arrow">+</span></button>
+      <div class="faq-a">Imediatamente após confirmar o pagamento, você recebe o acesso por e-mail. No caso de PIX, é automático. Cartão pode levar alguns minutos.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Posso usar em qualquer rede social? <span class="arrow">+</span></button>
+      <div class="faq-a">Sim! As frases são para uso pessoal e criativo em Instagram, TikTok, WhatsApp, Telegram, Pinterest ou onde quiser.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Como funciona a garantia de 7 dias? <span class="arrow">+</span></button>
+      <div class="faq-a">Se por qualquer motivo você não ficar satisfeito nos primeiros 7 dias após a compra, basta pedir o reembolso que devolvemos 100% do valor. Sem perguntas.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">O produto tem algum prazo de validade? <span class="arrow">+</span></button>
+      <div class="faq-a">Não. Uma vez comprado, o acesso é vitalício. Você pode acessar quando quiser, pra sempre.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Posso vender as frases para outras pessoas? <span class="arrow">+</span></button>
+      <div class="faq-a">O pack é para uso pessoal e criativo. A revenda do material sem autorização não é permitida.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-bottom">
+  <h2>NÃO PERCA<br>ESSA OFERTA</h2>
+  <p>200 frases aesthetic por menos que um lanche. Acesso imediato. Garantia de 7 dias.</p>
+  <a href="https://pay.kiwify.com.br/2EhyEUl" class="btn-buy-lg" target="_blank" rel="noopener">
+    QUERO MEU PACK AGORA →
+  </a>
+  <div style="margin-top:20px; color:var(--muted2); font-size:13px;">
+    🛡️ Compra 100% segura &nbsp;|&nbsp; ⚡ Entrega imediata &nbsp;|&nbsp; 🔄 Garantia de 7 dias
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Pack Frases Aesthetic • Produto Digital • <a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p>
+  <p style="margin-top:8px; opacity:.6;">Ao comprar você concorda com os termos de uso.</p>
+</footer>
+
+<script>
+// ── STRIP de frases animado ──
+const stripFrases = [
+  "A madrugada entende coisas que ninguém entende.",
+  "Solidão não é não ter ninguém — é não ser entendido.",
+  "São 3 da manhã e minha mente não quer saber de descanso.",
+  "A saudade é o amor que não sabe que acabou.",
+  "Minha mente é meu maior aliado e meu pior inimigo.",
+  "Caí. Fiquei no chão um tempo. Levantei do meu jeito.",
+  "A rua ensina o que a escola finge que não existe.",
+  "Quem sou eu quando ninguém tá olhando?",
+  "A lua não julga. Por isso prefiro a noite.",
+  "Penso demais e sinto mais ainda.",
+  "O tempo não espera — e isso é bom e aterrorizante.",
+  "Fui feito de tudo que tentou me quebrar.",
+];
+
+const strip = document.getElementById("strip");
+const doubled = [...stripFrases, ...stripFrases];
+
+doubled.forEach(f => {
+  const card = document.createElement("div");
+  card.className = "strip-card";
+  card.innerHTML = `<div class="cat-dot"></div>${f}`;
+  strip.appendChild(card);
+});
+
+// ── FAQ accordion ──
+document.querySelectorAll(".faq-q").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+    if (!isOpen) item.classList.add("open");
+  });
+});
+</script>
+</body>
+</html>
